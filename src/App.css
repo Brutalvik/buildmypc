@@ -20,3 +20,10 @@ h1 {
 .site-layout-background {
   background: #fff;
 }
+
+.cart {
+  margin-top: -1.5em;
+  color: white;
+  font-size: 2em;
+  float: right;
+}

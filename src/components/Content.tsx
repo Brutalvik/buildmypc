@@ -7,8 +7,8 @@ import { useAppSelector } from '../app/hooks';
 
 const { Content } = Layout;
 
-const ContentData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
-  const cpu = useAppSelector((state) => state.partsReducer);
+const ContentData: React.FC = () => {
+  const data = useAppSelector((state) => state.partsReducer);
 
   return (
     <Content style={{ padding: '0 50px' }}>
