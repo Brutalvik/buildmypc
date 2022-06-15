@@ -1,8 +1,7 @@
 import React from 'react';
 import { ItemInterface } from '../models/model';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, MenuProps, Badge } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
 
 const { Header } = Layout;
 
@@ -25,7 +24,9 @@ const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
         style={{ fontWeight: 'bolder' }}
         items={nav}
       />
-      <ShoppingCartOutlined className='cart' />
+      <Badge className='cart' count={1}>
+        <ShoppingCartOutlined />
+      </Badge>
     </Header>
   );
 };

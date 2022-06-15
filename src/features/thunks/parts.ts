@@ -28,25 +28,24 @@ export const fetchCpuData = (key: string, selection: string) => {
     try {
       fetchCpu().then((res) => {
         if (res.status !== 200) {
-          dispatch(
-            partsActions.error({
-              status: true,
-              message: 'ERROR FETCHING DATA',
-            })
-          );
+          // dispatch(
+          //   partsActions.error({
+          //     status: true,
+          //     message: 'ERROR FETCHING DATA',
+          //   })
+          // );
         } else {
           cases(selection, dispatch, res);
         }
       });
     } catch (error) {
-      throw new Error(
-        dispatch(
-          partsActions.error({
-            status: true,
-            message: 'SOMETHING WENT WRONG!',
-          })
-        )
-      );
+      throw new Error();
+      // dispatch(
+      //   partsActions.error({
+      //     status: true,
+      //     message: 'SOMETHING WENT WRONG!',
+      //   })
+      // )
     }
   };
 };

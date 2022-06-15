@@ -14,11 +14,6 @@ const initialState: PartsInterface = {
   memory: [],
   motherboard: [],
   gpu: [],
-  error: {
-    status: false,
-    message: '',
-  },
-  loading: false,
 };
 
 const partsSlice = createSlice({
@@ -37,12 +32,12 @@ const partsSlice = createSlice({
     gpu(state, action: PayloadAction<object[]>) {
       state.gpu = action.payload;
     },
-    error(state, action: PayloadAction<object>) {
-      state.error = action.payload;
-    },
-    loading(state, action: PayloadAction<boolean>) {
-      state.loading = action.payload;
-    },
+    // error(state, action: PayloadAction<object>) {
+    //   state.error = action.payload;
+    // },
+    // loading(state, action: PayloadAction<boolean>) {
+    //   state.loading = action.payload;
+    // },
   },
 });
 

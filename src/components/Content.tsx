@@ -11,11 +11,11 @@ const ContentData: React.FC = () => {
   const data = useAppSelector((state) => state.partsReducer);
 
   return (
-    <Content style={{ padding: '0 50px' }}>
+    <Content className='main'>
       <Breadcrumbs />
       <Layout className='site-layout-background' style={{ padding: '24px 0' }}>
         <Sidebar />
-        <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
+        <Content className='content'>Content</Content>
       </Layout>
     </Content>
   );
