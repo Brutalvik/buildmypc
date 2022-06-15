@@ -8,8 +8,7 @@ import { useAppSelector } from '../app/hooks';
 const { Content } = Layout;
 
 const ContentData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
-  const cpu = useAppSelector((state) => state.partsReducer.cpu);
-  console.log('Data from CONTENT : ', cpu);
+  const cpu = useAppSelector((state) => state.partsReducer);
 
   return (
     <Content style={{ padding: '0 50px' }}>

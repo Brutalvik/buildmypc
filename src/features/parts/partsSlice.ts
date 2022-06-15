@@ -2,10 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface PartsInterface {
   cpu?: object[];
-  memory: object[];
-  motherboard: object[];
-  gpu: object[];
-  error: object;
+  memory?: object[];
+  motherboard?: object[];
+  gpu?: object[];
+  error?: object;
+  loading?: boolean;
 }
 
 const initialState: PartsInterface = {
@@ -17,6 +18,7 @@ const initialState: PartsInterface = {
     status: false,
     message: '',
   },
+  loading: false,
 };
 
 const partsSlice = createSlice({
@@ -37,6 +39,9 @@ const partsSlice = createSlice({
     },
     error(state, action: PayloadAction<object>) {
       state.error = action.payload;
+    },
+    loading(state, action: PayloadAction<boolean>) {
+      state.loading = action.payload;
     },
   },
 });

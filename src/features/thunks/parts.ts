@@ -1,22 +1,23 @@
 import { partsActions } from '../parts/partsSlice';
 import axios from 'axios';
 
-export const fetchCpuData = (key: string) => {
+export const fetchCpuData = (key: string, selection: string) => {
   return async (dispatch: any) => {
     const fetchCpu = async () => {
       await axios
         .get(
-          `https://pcpartsdata-default-rtdb.firebaseio.com/cpu.json?auth=${key}`
+          `https://pcpartsdata-default-rtdb.firebaseio.com/${selection}.json?auth=${key}`
         )
         .then((res) => {
           if (res.status !== 200) {
             dispatch(
               partsActions.error({
                 status: true,
-                message: 'ERROR FETCHING CPU DATA',
+                message: 'ERROR FETCHING DATA',
               })
             );
           } else {
+            console.log(res);
             dispatch(partsActions.cpu(res.data));
           }
         });

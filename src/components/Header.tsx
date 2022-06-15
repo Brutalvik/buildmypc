@@ -1,12 +1,15 @@
 import React from 'react';
 import { ItemInterface } from '../models/model';
 import { Layout, Menu } from 'antd';
+import Logo from '../assets/buildit.png';
 const { Header } = Layout;
 
-const Head: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
+const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
   return (
     <Header className='header'>
-      <div className='logo' />
+      <div className='logo'>
+        <h1>Build IT</h1>
+      </div>
       <Menu
         theme='dark'
         mode='horizontal'
@@ -17,4 +20,4 @@ const Head: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
   );
 };
 
-export default Head;
+export default HeaderData;

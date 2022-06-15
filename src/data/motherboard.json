@@ -1,702 +1,902 @@
 [
   {
+    "Brand": "Asus",
     "Name": "Asus TUF H310-Plus Gaming",
     "Year": "2018",
     "Socket": "1x LGA 1151",
     "Chipset": "Intel H310",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90144"
   },
   {
-    "Name": "Asus TUF H310M-Plus Gaming",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus Prime H310I-Plus",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asus Prime H310I-Plus R2.0",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asus Prime H310M-C",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus Prime H310M-C R2.0",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus Prime H310T",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Thin Mini-ITX"
-  },
-  {
-    "Name": "Asus Prime H310T R2.0",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H310",
-    "Formfactor": "Thin Mini-ITX"
-  },
-  {
-    "Name": "Asus H370 Mining Master",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel H370",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock A320M-HDV R3.0",
-    "Year": "2018",
-    "Socket": "1x AM4",
-    "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock A320M-DVS R3.0",
-    "Year": "2018",
-    "Socket": "1x AM4",
-    "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Supermicro C9Z390-CG",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Supermicro C7C242-CB-M",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel C242",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Supermicro C7C242-CB-MW",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel C242",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Biostar B360M D2V",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B360",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus KNPA-U16",
-    "Year": "2018",
-    "Socket": "1x SP3",
-    "Chipset": "None + None",
-    "Formfactor": "SSI-EEB"
-  },
-  {
-    "Name": "Asus ROG Maximus XI Hero Wi-Fi - Black Ops 4 Edition",
-    "Year": "2018",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B365 Phantom Gaming 4",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B365 Pro4",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B365M Phantom Gaming 4",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock B365M Pro4",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock B365M-ITX/ac",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asus Prime B365M-A",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus Prime B365M-K",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus B365M-Kylin",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus B365M-Basalt",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus B365M-Pixiu",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel B365",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock B450M Steel Legend",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B450",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock B450 Steel Legend",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B450",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B450M-HDV R4.0",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B450",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock Z390 Steel Legend",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z390 Aorus Xtreme Waterforce 5G",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "E-ATX"
-  },
-  {
-    "Name": "MSI MEG X570 Godlike",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "E-ATX"
-  },
-  {
-    "Name": "Asrock X570 Taichi",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock X570 Phantom Gaming X",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte X570 Aorus Xtreme",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "E-ATX"
-  },
-  {
-    "Name": "Gigabyte X570 Aorus Master",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z390 Phantom Gaming X",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z390 Phantom Gaming 7",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z390 Phantom Gaming 4S",
-    "Year": "2019",
-    "Socket": "1x LGA 1151",
-    "Chipset": "Intel Z390",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B450M Pro4-F",
-    "Year": "2019",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B450",
-    "Formfactor": "Micro-ATX"
-  },
-  {
+    "Brand": "Asrock",
     "Name": "Asrock A320M Pro4 R2.0",
     "Year": "2019",
     "Socket": "1x AM4",
     "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90145"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock A320M Pro4-F",
     "Year": "2019",
     "Socket": "1x AM4",
     "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90146"
   },
   {
-    "Name": "Asrock A320M-HDV R4.0",
-    "Year": "2019",
+    "Brand": "Asrock",
+    "Name": "Asrock A320M-DVS R3.0",
+    "Year": "2018",
     "Socket": "1x AM4",
     "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90147"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock A320M-DVS R4.0",
     "Year": "2019",
     "Socket": "1x AM4",
     "Chipset": "AMD A320",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90148"
   },
   {
+    "Brand": "Asrock",
+    "Name": "Asrock A320M-HDV R3.0",
+    "Year": "2018",
+    "Socket": "1x AM4",
+    "Chipset": "AMD A320",
+    "Formfactor": "Micro-ATX",
+    "ID": "90149"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock A320M-HDV R4.0",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD A320",
+    "Formfactor": "Micro-ATX",
+    "ID": "90150"
+  },
+  {
+    "Brand": "Asrock",
     "Name": "Asrock A320TM-ITX",
     "Year": "2019",
     "Socket": "1x AM4",
     "Chipset": "AMD A320",
-    "Formfactor": "Thin Mini-ITX"
+    "Formfactor": "Thin Mini-ITX",
+    "ID": "90151"
   },
   {
-    "Name": "Asus ROG Crosshair VIII Formula",
+    "Brand": "Asrock",
+    "Name": "Asrock B365 Phantom Gaming 4",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "ATX",
+    "ID": "90152"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B365 Pro4",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "ATX",
+    "ID": "90153"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B365M Phantom Gaming 4",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90154"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B365M Pro4",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90155"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B365M-ITX/ac",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Mini-ITX",
+    "ID": "90156"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B450 Steel Legend",
     "Year": "2019",
     "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
+    "Chipset": "AMD B450",
+    "Formfactor": "ATX",
+    "ID": "90157"
   },
   {
-    "Name": "Asus ROG Strix X570-F Gaming",
+    "Brand": "Asrock",
+    "Name": "Asrock B450M Pro4-F",
     "Year": "2019",
     "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
+    "Chipset": "AMD B450",
+    "Formfactor": "Micro-ATX",
+    "ID": "90158"
   },
   {
-    "Name": "Asus ROG Strix X570-E Gaming",
+    "Brand": "Asrock",
+    "Name": "Asrock B450M Steel Legend",
     "Year": "2019",
     "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
+    "Chipset": "AMD B450",
+    "Formfactor": "Micro-ATX",
+    "ID": "90159"
   },
   {
-    "Name": "Asus Pro WS X570-Ace",
+    "Brand": "Asrock",
+    "Name": "Asrock B450M-HDV R4.0",
     "Year": "2019",
     "Socket": "1x AM4",
-    "Chipset": "AMD X570",
-    "Formfactor": "ATX"
+    "Chipset": "AMD B450",
+    "Formfactor": "Micro-ATX",
+    "ID": "90160"
   },
   {
-    "Name": "Asrock Z490 Extreme4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Steel Legend",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Pro4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 PG Velocita",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming 4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming 4/2.5G",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming 4/ac",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming 4/ax",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming-ITX/TB3",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asrock Z490M-ITX/ac",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asrock Z490M Pro4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock Z490 Phantom Gaming 4SR",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock H470 Steel Legend",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel H470",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock H470 Phantom Gaming 4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel H470",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock H470M-ITX/ac",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel H470",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asrock H470M Pro4",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel H470",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asrock B460 Steel Legend",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel B460",
-    "Formfactor": "ATX"
-  },
-  {
+    "Brand": "Asrock",
     "Name": "Asrock B460 Phantom Gaming 4",
     "Year": "2020",
     "Socket": "1x LGA 1200",
     "Chipset": "Intel B460",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90161"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock B460 Pro4",
     "Year": "2020",
     "Socket": "1x LGA 1200",
     "Chipset": "Intel B460",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90162"
   },
   {
-    "Name": "Asrock B460M-ITX/ac",
+    "Brand": "Asrock",
+    "Name": "Asrock B460 Steel Legend",
     "Year": "2020",
     "Socket": "1x LGA 1200",
     "Chipset": "Intel B460",
-    "Formfactor": "Mini-ITX"
+    "Formfactor": "ATX",
+    "ID": "90163"
   },
   {
-    "Name": "Asrock B460M Steel Legend",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel B460",
-    "Formfactor": "Micro-ATX"
-  },
-  {
+    "Brand": "Asrock",
     "Name": "Asrock B460M Pro4",
     "Year": "2020",
     "Socket": "1x LGA 1200",
     "Chipset": "Intel B460",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90164"
   },
   {
+    "Brand": "Asrock",
+    "Name": "Asrock B460M Steel Legend",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel B460",
+    "Formfactor": "Micro-ATX",
+    "ID": "90165"
+  },
+  {
+    "Brand": "Asrock",
     "Name": "Asrock B460M-HDV",
     "Year": "2020",
     "Socket": "1x LGA 1200",
     "Chipset": "Intel B460",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90166"
   },
   {
-    "Name": "Gigabyte Z490 Vision G",
+    "Brand": "Asrock",
+    "Name": "Asrock B460M-ITX/ac",
     "Year": "2020",
     "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
+    "Chipset": "Intel B460",
+    "Formfactor": "Mini-ITX",
+    "ID": "90167"
   },
   {
-    "Name": "Gigabyte Z490 Gaming X",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 UD",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 UD AC",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490M",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Gigabyte Z490I Aorus Ultra",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Elite",
-    "Year": "2020",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Pro AX",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Xtreme",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "E-ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Xtreme Waterforce",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "E-ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Master",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Ultra",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Ultra G2",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Aorus Elite AC",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490 Vision D",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Gigabyte Z490M Gaming X",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Micro-ATX"
-  },
-  {
-    "Name": "Asus ROG Strix Z490-I Gaming",
-    "Year": "2022",
-    "Socket": "1x LGA 1200",
-    "Chipset": "Intel Z490",
-    "Formfactor": "Mini-ITX"
-  },
-  {
-    "Name": "Asrock B550 Taichi",
-    "Year": "2022",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B550",
-    "Formfactor": "ATX"
-  },
-  {
+    "Brand": "Asrock",
     "Name": "Asrock B550 Extreme4",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90168"
   },
   {
-    "Name": "Asrock B550 Steel Legend",
-    "Year": "2022",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B550",
-    "Formfactor": "ATX"
-  },
-  {
-    "Name": "Asrock B550 Pro4",
-    "Year": "2022",
-    "Socket": "1x AM4",
-    "Chipset": "AMD B550",
-    "Formfactor": "ATX"
-  },
-  {
+    "Brand": "Asrock",
     "Name": "Asrock B550 PG Velocita",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90169"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock B550 Phantom Gaming 4",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90170"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock B550 Phantom Gaming 4/ac",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "ATX"
+    "Formfactor": "ATX",
+    "ID": "90171"
   },
   {
+    "Brand": "Asrock",
     "Name": "Asrock B550 Phantom Gaming-ITX/ax",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "Mini-ITX"
+    "Formfactor": "Mini-ITX",
+    "ID": "90172"
   },
   {
-    "Name": "Asrock B550M Steel Legend",
+    "Brand": "Asrock",
+    "Name": "Asrock B550 Pro4",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "ATX",
+    "ID": "90173"
   },
   {
+    "Brand": "Asrock",
+    "Name": "Asrock B550 Steel Legend",
+    "Year": "2022",
+    "Socket": "1x AM4",
+    "Chipset": "AMD B550",
+    "Formfactor": "ATX",
+    "ID": "90174"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B550 Taichi",
+    "Year": "2022",
+    "Socket": "1x AM4",
+    "Chipset": "AMD B550",
+    "Formfactor": "ATX",
+    "ID": "90175"
+  },
+  {
+    "Brand": "Asrock",
     "Name": "Asrock B550M Pro4",
     "Year": "2022",
     "Socket": "1x AM4",
     "Chipset": "AMD B550",
-    "Formfactor": "Micro-ATX"
+    "Formfactor": "Micro-ATX",
+    "ID": "90176"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock B550M Steel Legend",
+    "Year": "2022",
+    "Socket": "1x AM4",
+    "Chipset": "AMD B550",
+    "Formfactor": "Micro-ATX",
+    "ID": "90177"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock H470 Phantom Gaming 4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel H470",
+    "Formfactor": "ATX",
+    "ID": "90178"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock H470 Steel Legend",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel H470",
+    "Formfactor": "ATX",
+    "ID": "90179"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock H470M Pro4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel H470",
+    "Formfactor": "Micro-ATX",
+    "ID": "90180"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock H470M-ITX/ac",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel H470",
+    "Formfactor": "Mini-ITX",
+    "ID": "90181"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock X570 Phantom Gaming X",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90182"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock X570 Taichi",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90183"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z390 Phantom Gaming 4S",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90184"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z390 Phantom Gaming 7",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90185"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z390 Phantom Gaming X",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90186"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z390 Steel Legend",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90187"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Extreme4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90188"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 PG Velocita",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90189"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming 4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90190"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming 4/2.5G",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90191"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming 4/ac",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90192"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming 4/ax",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90193"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming 4SR",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90194"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Phantom Gaming-ITX/TB3",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Mini-ITX",
+    "ID": "90195"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Pro4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90196"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490 Steel Legend",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90197"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490M Pro4",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Micro-ATX",
+    "ID": "90198"
+  },
+  {
+    "Brand": "Asrock",
+    "Name": "Asrock Z490M-ITX/ac",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Mini-ITX",
+    "ID": "90199"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus B365M-Basalt",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90200"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus B365M-Kylin",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90201"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus B365M-Pixiu",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90202"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus H370 Mining Master",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H370",
+    "Formfactor": "ATX",
+    "ID": "90203"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus KNPA-U16",
+    "Year": "2018",
+    "Socket": "1x SP3",
+    "Chipset": "None + None",
+    "Formfactor": "SSI-EEB",
+    "ID": "90204"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime B365M-A",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90205"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime B365M-K",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B365",
+    "Formfactor": "Micro-ATX",
+    "ID": "90206"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310I-Plus",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Mini-ITX",
+    "ID": "90207"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310I-Plus R2.0",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Mini-ITX",
+    "ID": "90208"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310M-C",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Micro-ATX",
+    "ID": "90209"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310M-C R2.0",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Micro-ATX",
+    "ID": "90210"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310T",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Thin Mini-ITX",
+    "ID": "90211"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Prime H310T R2.0",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Thin Mini-ITX",
+    "ID": "90212"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus Pro WS X570-Ace",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90213"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus ROG Crosshair VIII Formula",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90214"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus ROG Maximus XI Hero Wi-Fi - Black Ops 4 Edition",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90215"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus ROG Strix X570-E Gaming",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90216"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus ROG Strix X570-F Gaming",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90217"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus ROG Strix Z490-I Gaming",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Mini-ITX",
+    "ID": "90218"
+  },
+  {
+    "Brand": "Asus",
+    "Name": "Asus TUF H310M-Plus Gaming",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel H310",
+    "Formfactor": "Micro-ATX",
+    "ID": "90219"
+  },
+  {
+    "Brand": "Biostar",
+    "Name": "Biostar B360M D2V",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel B360",
+    "Formfactor": "Micro-ATX",
+    "ID": "90220"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte X570 Aorus Master",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "ATX",
+    "ID": "90221"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte X570 Aorus Xtreme",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "E-ATX",
+    "ID": "90222"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z390 Aorus Xtreme Waterforce 5G",
+    "Year": "2019",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "E-ATX",
+    "ID": "90223"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Elite",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90224"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Elite AC",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90225"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Master",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90226"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Pro AX",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90227"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Ultra",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90228"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Ultra G2",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90229"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Xtreme",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "E-ATX",
+    "ID": "90230"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Aorus Xtreme Waterforce",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "E-ATX",
+    "ID": "90231"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Gaming X",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90232"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 UD",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90233"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 UD AC",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90234"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Vision D",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90235"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490 Vision G",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "ATX",
+    "ID": "90236"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490I Aorus Ultra",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Mini-ITX",
+    "ID": "90237"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490M",
+    "Year": "2020",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Micro-ATX",
+    "ID": "90238"
+  },
+  {
+    "Brand": "Gigabyte",
+    "Name": "Gigabyte Z490M Gaming X",
+    "Year": "2022",
+    "Socket": "1x LGA 1200",
+    "Chipset": "Intel Z490",
+    "Formfactor": "Micro-ATX",
+    "ID": "90239"
+  },
+  {
+    "Brand": "MSI",
+    "Name": "MSI MEG X570 Godlike",
+    "Year": "2019",
+    "Socket": "1x AM4",
+    "Chipset": "AMD X570",
+    "Formfactor": "E-ATX",
+    "ID": "90240"
+  },
+  {
+    "Brand": "Supermicro",
+    "Name": "Supermicro C7C242-CB-M",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel C242",
+    "Formfactor": "Micro-ATX",
+    "ID": "90241"
+  },
+  {
+    "Brand": "Supermicro",
+    "Name": "Supermicro C7C242-CB-MW",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel C242",
+    "Formfactor": "Micro-ATX",
+    "ID": "90242"
+  },
+  {
+    "Brand": "Supermicro",
+    "Name": "Supermicro C9Z390-CG",
+    "Year": "2018",
+    "Socket": "1x LGA 1151",
+    "Chipset": "Intel Z390",
+    "Formfactor": "ATX",
+    "ID": "90243"
   }
 ]
