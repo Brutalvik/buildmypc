@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Corsair Vengeance LPX",
+    "Type": "DDR3",
+    "For": "High Performance",
+    "Capacity": "4 GB",
+    "Price": "29.99"
+  },
+  {
+    "Name": "XPG Z1 Memory Modules",
+    "Type": "DDR4",
+    "For": "Multiplayer Gaming",
+    "Capacity": "8 GB",
+    "Price": "47.99"
+  },
+  {
+    "Name": "OLOy DDR4 RAM",
+    "Type": "DDR4",
+    "For": "Desktop Gaming",
+    "Capacity": "8 GB",
+    "Price": "62.75"
+  },
+  {
+    "Name": "HyperX Fury Black XMP Memory",
+    "Type": "DDR4",
+    "For": "First Person Shooting Games",
+    "Capacity": "16 GB",
+    "Price": "102.75"
+  },
+  {
+    "Name": "Silicon Power XPOWER Turbine",
+    "Type": "DDR4",
+    "For": "High Speed",
+    "Capacity": "16 GB",
+    "Price": "79.97"
+  }
+]
