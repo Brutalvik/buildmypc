@@ -64,6 +64,12 @@ const Sidebar: React.FC = () => {
     }
   };
 
+  console.log('Selected  : ', part);
+
+  useEffect(() => {
+    dispatch(genericActions.part(selectedOptions));
+  }, [dispatch, selectedOptions]);
+
   //Microcomponent to render collapsable side menu with checkboxes
   const Submenu = () => {
     return (
