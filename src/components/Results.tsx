@@ -1,20 +1,76 @@
 import React, { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { GenericInterface } from '../features/parts/genericSlice';
-import { Avatar, Button, List, Skeleton } from 'antd';
+import { genericActions } from '../features/parts/genericSlice';
+import { Avatar, Button, List, Skeleton, notification } from 'antd';
+import Notification from './Notification';
+import { NotificationInterface } from '../models/model';
 
 const Results: React.FC = () => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, types, part, loading } = state.genericReducer;
+  const { error, types, part, loading, cartQuantity, notificaitonMessage } =
+    state.genericReducer;
   const data = state.partsReducer;
 
-  const [renderData, setRenderData] = useState<any[]>();
-  const [filterData, setFilterData] = useState<GenericInterface['types']>();
+  const [renderData, setRenderData] = useState<any[]>([]);
+  const [cart, setCart] = useState<any>([]);
 
-  //   console.log(request);
-  //   console.log(data)
+  //Open notification function
+  const openNotification = (data: any) => {
+    notification.info({
+      message: data.message,
+      description: data.description,
+      duration: 1,
+      maxCount: 1,
+    });
+  };
 
+  //Add to cart
+  const addToCart = (event: any) => {
+    const cartData = {
+      id: event.id,
+      name: event.name,
+      brand: event.brand,
+      clock: event.clock,
+      socket: event.socket,
+      price: event.price,
+      quantity: 1,
+    };
+    setCart([...cart, cartData]);
+    const notification = {
+      message: event.name,
+      description: `for ${event.price} was added to cart`,
+    };
+    openNotification(notification);
+  };
+
+  //Remove from cart
+  const removeFromCart = (event: any) => {
+    if (cartQuantity <= 0) {
+      dispatch(genericActions.cartQuantity(0));
+    } else {
+      dispatch(genericActions.cartQuantity(cartQuantity - 1));
+    }
+    setCart(
+      cart?.filter((item: any) => {
+        return item.id != event.id;
+      })
+    );
+    const notification = {
+      message: event.name,
+      description: `for ${event.price} was removed to cart`,
+    };
+    openNotification(notification);
+  };
+
+  //Update cart in store
+  useEffect(() => {
+    if (cart) {
+      dispatch(genericActions.cart(cart));
+    }
+  }, [cart, dispatch]);
+
+  //Fetch render data from store
   useEffect(() => {
     Object.entries(data).map((reqData) => {
       part.map((req) => {
@@ -24,6 +80,17 @@ const Results: React.FC = () => {
       });
     });
   }, [part, renderData]);
+
+  //   useEffect(() => {
+  //     types.map((type) => {
+  //       renderData?.filter((product) => {
+  //         if (type === product.brand) {
+  //           const newState = [...filterData, product];
+  //           setFilterData(newState);
+  //         }
+  //       });
+  //     });
+  //   }, [filterData]);
 
   const loadMore = !loading ? (
     <div
@@ -38,22 +105,26 @@ const Results: React.FC = () => {
     </div>
   ) : null;
 
-  console.log('Data : ', renderData);
+  //   console.log('Data : ', renderData);
 
   return (
     <>
+      <Notification openNotification={() => openNotification} />
       <List
-        className='demo-loadmore-list'
         loading={loading}
         itemLayout='horizontal'
         size='large'
         loadMore={loadMore}
-        dataSource={renderData!}
+        dataSource={renderData}
         renderItem={(item) => (
           <List.Item
             actions={[
-              <Button key='list-loadmore-edit'>Remove</Button>,
-              <Button key='list-loadmore-more'>Add to Cart</Button>,
+              <Button key={item.id} onClick={() => removeFromCart(item)}>
+                Remove
+              </Button>,
+              <Button key={item.id} onClick={() => addToCart(item)}>
+                Add to Cart
+              </Button>,
             ]}
           >
             <Skeleton avatar title={false} loading={loading} active>

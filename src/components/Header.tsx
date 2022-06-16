@@ -2,6 +2,7 @@ import React from 'react';
 import { ItemInterface } from '../models/model';
 import { Layout, Menu, MenuProps, Badge } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 
 const { Header } = Layout;
 
@@ -13,6 +14,8 @@ const nav: MenuProps['items'] = ['Build PC', 'Pre-Built PC', 'Laptops'].map(
 );
 
 const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
+  const { cartQuantity } = useAppSelector((state) => state.genericReducer);
+  console.log(cartQuantity);
   return (
     <Header className='header'>
       <div className='logo'>
@@ -24,7 +27,7 @@ const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
         style={{ fontWeight: 'bolder' }}
         items={nav}
       />
-      <Badge className='cart' count={2}>
+      <Badge className='cart' count={cartQuantity}>
         <ShoppingCartOutlined />
       </Badge>
     </Header>

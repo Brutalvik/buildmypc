@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Checkbox, Collapse, Layout } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { Spin } from 'antd';
-import {
-  genericActions,
-  GenericInterface,
-} from '../features/parts/genericSlice';
+import { genericActions } from '../features/parts/genericSlice';
+import { GenericInterface } from '../models/model';
 
 //Desctructring Antd Components
 const { Sider } = Layout;
@@ -36,13 +34,13 @@ const Sidebar: React.FC = () => {
   const subData = (head: string) => {
     switch (head) {
       case 'cpu':
-        return ['AMD', 'Intel'];
+        return ['AMD', 'INTEL'];
       case 'motherboard':
-        return ['AMD-MB', 'Intel-MB'];
+        return ['AM4', 'LGA1151', 'LGA1200'];
       case 'memory':
         return ['DDR3', 'DDR4'];
       case 'gpu':
-        return ['Radeon', 'Nvidia'];
+        return ['AMD', 'Nvidia'];
       default:
         break;
     }
