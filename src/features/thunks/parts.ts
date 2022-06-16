@@ -21,6 +21,7 @@ const cases = (selection: string, dispatch: any, res: any) => {
 
 export const fetchCpuData = (key: string, selection: string) => {
   return async (dispatch: any) => {
+    dispatch(genericActions.loading(true));
     const fetchCpu = async () => {
       return await axios.get(
         `https://pcpartsdata-default-rtdb.firebaseio.com/${selection}.json?auth=${key}`
@@ -35,9 +36,10 @@ export const fetchCpuData = (key: string, selection: string) => {
               message: 'ERROR FETCHING DATA',
             })
           );
-          console.log(res.status);
+          dispatch(genericActions.loading(false));
         } else {
           cases(selection, dispatch, res);
+          dispatch(genericActions.loading(false));
         }
       });
     } catch (error) {
@@ -48,6 +50,7 @@ export const fetchCpuData = (key: string, selection: string) => {
           message: 'SOMETHING WENT WRONG!',
         })
       );
+      dispatch(genericActions.loading(false));
     }
   };
 };

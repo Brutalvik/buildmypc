@@ -24,7 +24,7 @@ const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
         style={{ fontWeight: 'bolder' }}
         items={nav}
       />
-      <Badge className='cart' count={1}>
+      <Badge className='cart' count={2}>
         <ShoppingCartOutlined />
       </Badge>
     </Header>
