@@ -31,3 +31,8 @@ export interface GenericInterface {
 export interface NotificationInterface {
   openNotification: () => void;
 }
+
+export interface CartDrawerInterface {
+  visible: boolean;
+  onClose: () => void;
+}

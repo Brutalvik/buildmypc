@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CartInterface, GenericInterface } from '../../models/model';
+import { GenericInterface } from '../../models/model';
 
 const initialState = {
   error: false,

@@ -1,31 +1,21 @@
 import { Button, Drawer } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
+import { CartDrawerInterface } from '../models/model';
 
-const Cart: React.FC = () => {
-  const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
-
+const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
   return (
     <>
-      <Button type='primary' onClick={showDrawer}>
-        Open
-      </Button>
       <Drawer
-        title='Basic Drawer'
+        title='Cart'
         placement='right'
         onClose={onClose}
         visible={visible}
+        keyboard={true}
       >
         <p>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
+        <Button type='primary'>Pay</Button>
       </Drawer>
     </>
   );
