@@ -46,21 +46,25 @@ const Results: React.FC = () => {
         className='demo-loadmore-list'
         loading={loading}
         itemLayout='horizontal'
+        size='large'
         loadMore={loadMore}
         dataSource={renderData!}
         renderItem={(item) => (
           <List.Item
             actions={[
-              <a key='list-loadmore-edit'>Remove</a>,
-              <a key='list-loadmore-more'>Add to Cart</a>,
+              <Button key='list-loadmore-edit'>Remove</Button>,
+              <Button key='list-loadmore-more'>Add to Cart</Button>,
             ]}
           >
             <Skeleton avatar title={false} loading={loading} active>
               <List.Item.Meta
                 avatar={<Avatar />}
-                title={item.name}
-                description={item.clock}
+                title={`${item.brand} ${item.name}  -- ${item.socket}`}
+                description={`Clock Speed: ${item.clock}  ||  Total Cores: ${item.cores} || L3 Cache: ${item.l3} `}
               />
+              <div>
+                <h4>$ {item.price}</h4>
+              </div>
             </Skeleton>
           </List.Item>
         )}
