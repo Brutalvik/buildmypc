@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Checkbox, Collapse, Layout, Menu, MenuProps } from 'antd';
-import type { CheckboxChangeEvent } from 'antd/es/checkbox';
+import { Checkbox, Collapse, Layout } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { Spin } from 'antd';
 import {
   genericActions,
   GenericInterface,
 } from '../features/parts/genericSlice';
-import { prepareValueInterceptor } from '@testing-library/user-event/dist/types/document/value';
 
 //Desctructring Antd Components
 const { Sider } = Layout;
@@ -20,9 +18,13 @@ const Sidebar: React.FC = () => {
   const generic = useAppSelector((state) => state.genericReducer);
 
   //Destructring store state
-  const { loading, part } = generic;
+  const { loading, error } = generic;
 
-  const [selectedOptions, setSelectedOptions] = useState<any>();
+  const [selectedOptions, setSelectedOptions] =
+    useState<GenericInterface['part']>();
+  const [checkboxOptions, setCheckboxOptions] = useState<
+    GenericInterface['types'] | any
+  >();
   const [active, setActive] = useState<string>();
 
   //Capitalize function
@@ -36,7 +38,7 @@ const Sidebar: React.FC = () => {
       case 'cpu':
         return ['AMD', 'Intel'];
       case 'motherboard':
-        return ['AMD', 'Intel'];
+        return ['AMD-MB', 'Intel-MB'];
       case 'memory':
         return ['DDR3', 'DDR4'];
       case 'gpu':
@@ -52,23 +54,28 @@ const Sidebar: React.FC = () => {
   });
 
   //Handle panel selection
-  const handleMenuSelection = async (event: any) => {
+  const handleMenuSelection = (event: any) => {
     setActive(event);
     setSelectedOptions(event);
   };
 
   //Handle checkbox selection
-  const onCheckboxChange = (event: CheckboxChangeEvent) => {
-    if (event.target.checked) {
-      console.log(event.target.value);
-    }
+  const onCheckboxChange = (event: any) => {
+    setCheckboxOptions(event);
   };
 
-  console.log('Selected  : ', part);
+  //Dispatching selected options to store
+  useEffect(() => {
+    if (selectedOptions) {
+      dispatch(genericActions.part(selectedOptions));
+    }
+  }, [dispatch, selectedOptions]);
 
   useEffect(() => {
-    dispatch(genericActions.part(selectedOptions));
-  }, [dispatch, selectedOptions]);
+    if (checkboxOptions) {
+      dispatch(genericActions.types(checkboxOptions));
+    }
+  }, [dispatch, checkboxOptions]);
 
   //Microcomponent to render collapsable side menu with checkboxes
   const Submenu = () => {
@@ -80,13 +87,11 @@ const Sidebar: React.FC = () => {
       >
         {menuItems.map((values) => (
           <Panel header={capitalize(values)} key={values}>
-            {subData(values)?.map((value, index) => {
-              return (
-                <Checkbox key={index} value={value} onChange={onCheckboxChange}>
-                  {value}
-                </Checkbox>
-              );
-            })}
+            <Checkbox.Group
+              options={subData(values)}
+              onChange={onCheckboxChange}
+              value={checkboxOptions}
+            />
           </Panel>
         ))}
       </Collapse>
@@ -96,7 +101,15 @@ const Sidebar: React.FC = () => {
   //Render UI
   return (
     <Sider className='site-layout-background' width={200}>
-      {loading ? <Spin className='side-spin' /> : <Submenu />}
+      {!error ? (
+        loading ? (
+          <Spin className='side-spin' />
+        ) : (
+          <Submenu />
+        )
+      ) : (
+        <p>Error loading sidebar - Please referesh the page</p>
+      )}
     </Sider>
   );
 };

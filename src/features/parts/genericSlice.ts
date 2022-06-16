@@ -1,22 +1,24 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface GenericInterface {
-  error?: object;
+  error?: boolean;
   loading?: boolean;
   part?: [];
+  types?: [];
 }
 
 const initialState = {
-  error: {},
+  error: false,
   loading: false,
   part: [],
+  types: [],
 };
 
 const genericSlice = createSlice({
   name: 'parts',
   initialState,
   reducers: {
-    error(state, action: PayloadAction<object>) {
+    error(state, action: PayloadAction<boolean>) {
       state.error = action.payload;
     },
     loading(state, action: PayloadAction<boolean>) {
@@ -24,6 +26,9 @@ const genericSlice = createSlice({
     },
     part(state, action: PayloadAction<[]>) {
       state.part = action.payload;
+    },
+    types(state, action: PayloadAction<[]>) {
+      state.types = action.payload;
     },
   },
 });

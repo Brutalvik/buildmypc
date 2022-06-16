@@ -30,12 +30,7 @@ export const fetchCpuData = (key: string, selection: string) => {
     try {
       fetchCpu().then((res) => {
         if (res.status !== 200) {
-          dispatch(
-            genericActions.error({
-              status: true,
-              message: 'ERROR FETCHING DATA',
-            })
-          );
+          dispatch(genericActions.error(true));
           dispatch(genericActions.loading(false));
         } else {
           cases(selection, dispatch, res);
@@ -44,12 +39,7 @@ export const fetchCpuData = (key: string, selection: string) => {
       });
     } catch (error) {
       console.log(error);
-      dispatch(
-        genericActions.error({
-          status: true,
-          message: 'SOMETHING WENT WRONG!',
-        })
-      );
+      dispatch(genericActions.error(true));
       dispatch(genericActions.loading(false));
     }
   };
