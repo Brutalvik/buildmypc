@@ -3,13 +3,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface GenericInterface {
   error?: object;
   loading?: boolean;
-  part?: string;
+  part?: [];
 }
 
 const initialState = {
   error: {},
   loading: false,
-  part: '',
+  part: [],
 };
 
 const genericSlice = createSlice({
@@ -22,7 +22,7 @@ const genericSlice = createSlice({
     loading(state, action: PayloadAction<boolean>) {
       state.loading = action.payload;
     },
-    part(state, action: PayloadAction<string>) {
+    part(state, action: PayloadAction<[]>) {
       state.part = action.payload;
     },
   },
