@@ -1,28 +1,26 @@
 import React, { useEffect } from 'react';
 import { Layout } from 'antd';
-import { useAppDispatch, useAppSelector } from './app/hooks';
-import { partsActions } from './features/parts/partsSlice';
+import { useAppDispatch } from './app/hooks';
 import { fetchCpuData } from './features/thunks/parts';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import './App.css';
 
-const key = process.env.REACT_APP_DB_SECRET ?? '';
+export const dbkey = process.env.REACT_APP_DB_SECRET ?? '';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
-  // const data = useAppSelector((state) => state.partsReducer);
 
   useEffect(() => {
     const getData = async () => {
-      await dispatch(fetchCpuData(key, 'cpu'));
-      await dispatch(fetchCpuData(key, 'gpu'));
-      await dispatch(fetchCpuData(key, 'memory'));
-      await dispatch(fetchCpuData(key, 'motherboard'));
+      await dispatch(fetchCpuData(dbkey, 'cpu'));
+      await dispatch(fetchCpuData(dbkey, 'gpu'));
+      await dispatch(fetchCpuData(dbkey, 'memory'));
+      await dispatch(fetchCpuData(dbkey, 'motherboard'));
     };
     getData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <Layout>

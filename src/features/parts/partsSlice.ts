@@ -5,8 +5,6 @@ export interface PartsInterface {
   memory?: object[];
   motherboard?: object[];
   gpu?: object[];
-  error?: object;
-  loading?: boolean;
 }
 
 const initialState: PartsInterface = {
@@ -32,12 +30,6 @@ const partsSlice = createSlice({
     gpu(state, action: PayloadAction<object[]>) {
       state.gpu = action.payload;
     },
-    // error(state, action: PayloadAction<object>) {
-    //   state.error = action.payload;
-    // },
-    // loading(state, action: PayloadAction<boolean>) {
-    //   state.loading = action.payload;
-    // },
   },
 });
 

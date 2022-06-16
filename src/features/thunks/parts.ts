@@ -1,4 +1,5 @@
 import { partsActions } from '../parts/partsSlice';
+import { genericActions } from '../parts/genericSlice';
 import axios from 'axios';
 
 const cases = (selection: string, dispatch: any, res: any) => {
@@ -28,24 +29,25 @@ export const fetchCpuData = (key: string, selection: string) => {
     try {
       fetchCpu().then((res) => {
         if (res.status !== 200) {
-          // dispatch(
-          //   partsActions.error({
-          //     status: true,
-          //     message: 'ERROR FETCHING DATA',
-          //   })
-          // );
+          dispatch(
+            genericActions.error({
+              status: true,
+              message: 'ERROR FETCHING DATA',
+            })
+          );
+          console.log(res.status);
         } else {
           cases(selection, dispatch, res);
         }
       });
     } catch (error) {
-      throw new Error();
-      // dispatch(
-      //   partsActions.error({
-      //     status: true,
-      //     message: 'SOMETHING WENT WRONG!',
-      //   })
-      // )
+      console.log(error);
+      dispatch(
+        genericActions.error({
+          status: true,
+          message: 'SOMETHING WENT WRONG!',
+        })
+      );
     }
   };
 };
