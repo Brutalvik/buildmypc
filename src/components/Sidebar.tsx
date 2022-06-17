@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
       case 'memory':
         return ['DDR3', 'DDR4'];
       case 'gpu':
-        return ['AMD', 'Nvidia'];
+        return ['AMD-Radeon', 'Nvidia'];
       default:
         break;
     }

@@ -21,6 +21,7 @@ const Results: React.FC = () => {
       description: data.description,
       duration: 1,
       maxCount: 1,
+      placement: 'bottomRight',
     });
   };
 
@@ -35,31 +36,55 @@ const Results: React.FC = () => {
       price: event.price,
       quantity: 1,
     };
-    setCart([...cart, cartData]);
-    const notification = {
-      message: event.name,
-      description: `for ${event.price} was added to cart`,
-    };
-    openNotification(notification);
+
+    setCart((prev: any) => {
+      dispatch(genericActions.cartQuantity(cartQuantity + 1));
+      const notification = {
+        message: `Product: ${event.brand} ${event.name}  `,
+        description: `Price: ${event.price}  Added to cart`,
+      };
+      openNotification(notification);
+      const itemExists = cart?.find((item: any) => item.id === event.id);
+      if (itemExists) {
+        return prev.map((item: any) =>
+          item.id === event.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : { item }
+        );
+      }
+      console.log('E ', itemExists);
+      return [...prev, { ...cartData }];
+    });
   };
+
+  console.log(cart);
 
   //Remove from cart
   const removeFromCart = (event: any) => {
     if (cartQuantity <= 0) {
       dispatch(genericActions.cartQuantity(0));
+      const notification = {
+        message: 'Aww Snap!',
+        description: `There are no items in your cart.`,
+      };
+      openNotification(notification);
     } else {
-      dispatch(genericActions.cartQuantity(cartQuantity - 1));
+      setCart((prev: any) => {
+        dispatch(genericActions.cartQuantity(cartQuantity - 1));
+        const notification = {
+          message: `Product: ${event.brand} ${event.name}  `,
+          description: `Price: ${event.price}  Removed from cart`,
+        };
+        openNotification(notification);
+        return prev.map((item: any) =>
+          item.id === event.id
+            ? item.quantity === 1
+              ? item.id != event.id
+              : { ...item, quantity: item.quantity - 1 }
+            : null
+        );
+      });
     }
-    setCart(
-      cart?.filter((item: any) => {
-        return item.id != event.id;
-      })
-    );
-    const notification = {
-      message: event.name,
-      description: `for ${event.price} was removed to cart`,
-    };
-    openNotification(notification);
   };
 
   //Update cart in store
@@ -79,17 +104,6 @@ const Results: React.FC = () => {
       });
     });
   }, [part, renderData]);
-
-  //   useEffect(() => {
-  //     types.map((type) => {
-  //       renderData?.filter((product) => {
-  //         if (type === product.brand) {
-  //           const newState = [...filterData, product];
-  //           setFilterData(newState);
-  //         }
-  //       });
-  //     });
-  //   }, [filterData]);
 
   const loadMore = !loading ? (
     <div

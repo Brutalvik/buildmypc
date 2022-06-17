@@ -1,6 +1,7 @@
 import { Button, Drawer } from 'antd';
 import React from 'react';
 import { CartDrawerInterface } from '../models/model';
+import Cartdata from './Cartdata';
 
 const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
   return (
@@ -11,11 +12,14 @@ const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
         onClose={onClose}
         visible={visible}
         keyboard={true}
+        size='large'
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <Button type='primary'>Pay</Button>
+        <Cartdata />
+        <div style={{ float: 'right' }}>
+          <Button type='primary' shape='round' size='large'>
+            Pay
+          </Button>
+        </div>
       </Drawer>
     </>
   );

@@ -8,7 +8,6 @@ const initialState = {
   types: [],
   cart: [],
   cartQuantity: 0,
-  cartVisible: false,
   cartMessage: '',
   notificationVisible: false,
   notificaitonMessage: {
@@ -38,9 +37,6 @@ const genericSlice = createSlice({
     },
     cartQuantity(state, action: PayloadAction<number>) {
       state.cartQuantity = action.payload;
-    },
-    cartVisible(state, action: PayloadAction<boolean>) {
-      state.cartVisible = action.payload;
     },
     cartMessage(state, action: PayloadAction<string>) {
       state.cartMessage = action.payload;
