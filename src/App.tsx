@@ -10,6 +10,7 @@ import Results from './components/Results';
 import './App.css';
 import { genericActions } from './features/parts/genericSlice';
 import { CartInterface } from './models/model';
+import Home from './components/Home';
 
 export const dbkey = process.env.REACT_APP_DB_SECRET ?? '';
 const { Content } = Layout;
@@ -105,15 +106,12 @@ const App: React.FC = () => {
           className='site-layout-background'
           style={{ padding: '24px 24px' }}
         >
-          <Sidebar />
-          <Content className='content'>
-            <Results
-              cart={cart}
-              openNotification={openNotification}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          </Content>
+          <Home
+            cart={cart}
+            openNotification={openNotification}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+          />
         </Layout>
       </Content>
       <Footer />
