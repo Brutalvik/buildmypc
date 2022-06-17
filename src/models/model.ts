@@ -32,9 +32,11 @@ export interface CartDrawerInterface {
   visible?: boolean;
   showDrawer?: () => void;
   onClose?: () => void;
+  addToCart?: (e: any) => void;
+  removeFromCart?: (e: any) => void;
 }
 
-export interface ResultsInterface {
+export interface AppInterface {
   cart: [];
   openNotification: (e: any) => void;
   addToCart: (e: any) => void;

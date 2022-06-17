@@ -1,17 +1,53 @@
 import React, { useEffect, useState } from 'react';
 import { Button, List } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { CartDrawerInterface, CartInterface } from '../models/model';
+import { genericActions } from '../features/parts/genericSlice';
+import { eventNames } from 'process';
 
-const Cartdata: React.FC = () => {
+const Cartdata: React.FC<CartDrawerInterface> = ({
+  addToCart,
+  removeFromCart,
+}) => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, types, part, loading, cart, cartQuantity } =
-    state.genericReducer;
+  const { loading, cart, cartQuantity } = state.genericReducer;
   const [renderData, setRenderData] = useState<any[]>([]);
 
-  const handleIncrementQuantity = (event: any) => {};
+  const handleIncrementQuantity = (event: any) => {
+    setRenderData((prev: any) => {
+      dispatch(genericActions.cartQuantity(cartQuantity + 1));
+      const itemExists = cart?.find((item: any) => item.id === event.id);
+      if (itemExists) {
+        return prev.map((item: any) =>
+          item.id === event.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : { ...item }
+        );
+      }
+    });
+  };
 
-  const handleDecrementQuantity = (event: any) => {};
+  const handleDecrementQuantity = (event: any) => {
+    if (event.quantity === 0) {
+      setRenderData((prev: any) =>
+        prev.filter((item: any) => {
+          return item.id != event.id;
+        })
+      );
+    } else {
+      setRenderData((prev: any) =>
+        prev.reduce((acc: any, item: any) => {
+          if (item.id === event.id) {
+            dispatch(genericActions.cartQuantity(cartQuantity - 1));
+            return [...acc, { ...item, quantity: item.quantity - 1 }];
+          } else {
+            return [...acc, item];
+          }
+        }, [] as CartInterface[])
+      );
+    }
+  };
 
   useEffect(() => {
     setRenderData(cart);

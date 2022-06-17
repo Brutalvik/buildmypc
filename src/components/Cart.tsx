@@ -2,9 +2,9 @@ import { Button, Drawer } from 'antd';
 import React from 'react';
 import { CartDrawerInterface } from '../models/model';
 import Cartdata from './Cartdata';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 
 const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
-  console.log(visible);
   return (
     <>
       <Drawer

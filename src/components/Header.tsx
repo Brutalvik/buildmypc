@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CartDrawerInterface } from '../models/model';
 import { Layout, Menu, MenuProps, Badge, Drawer } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
-import Cart from './Cart';
+import { useAppSelector } from '../app/hooks';
 
 const { Header } = Layout;
 
-const nav: MenuProps['items'] = ['Build PC', 'Pre-Built PC', 'Laptops'].map(
-  (key) => ({
-    key,
-    label: `${key}`,
-  })
-);
+const nav: MenuProps['items'] = ['Build PC', 'Order Summary'].map((key) => ({
+  key,
+  label: `${key}`,
+}));
 
 const HeaderData: React.FC<CartDrawerInterface> = ({ showDrawer }) => {
   const { cartQuantity } = useAppSelector((state) => state.genericReducer);

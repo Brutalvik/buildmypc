@@ -38,9 +38,6 @@ const genericSlice = createSlice({
     cartQuantity(state, action: PayloadAction<number>) {
       state.cartQuantity = action.payload;
     },
-    cartMessage(state, action: PayloadAction<string>) {
-      state.cartMessage = action.payload;
-    },
     notificationVisible(state, action: PayloadAction<boolean>) {
       state.notificationVisible = action.payload;
     },
