@@ -24,6 +24,7 @@ const Cart: React.FC<AppInterface> = ({
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           deleteFromCart={deleteFromCart}
+          onClose={onClose}
         />
       </Drawer>
     </>

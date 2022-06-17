@@ -3,12 +3,15 @@ import { Button, Divider, List, Space } from 'antd';
 import { useAppSelector } from '../app/hooks';
 import { DeleteOutlined } from '@ant-design/icons';
 import { AppInterface } from '../models/model';
+import { useNavigate } from 'react-router-dom';
 
 const Cartdata: React.FC<AppInterface> = ({
   addToCart,
   removeFromCart,
   deleteFromCart,
+  onClose,
 }) => {
+  const navigate = useNavigate();
   const state = useAppSelector((state) => state.genericReducer);
   const { cartQuantity, loading, cart } = state;
   const [getCart, setGetCart] = useState<any[]>([]);
@@ -18,6 +21,11 @@ const Cartdata: React.FC<AppInterface> = ({
       (acc: number, item: any) => acc + item.quantity * item.price,
       0
     );
+  };
+
+  const payOrder = async () => {
+    navigate('/order');
+    onClose?.();
   };
 
   //Get cart data useeffect
@@ -84,6 +92,7 @@ const Cartdata: React.FC<AppInterface> = ({
           shape='round'
           size='large'
           style={{ marginLeft: '90%' }}
+          onClick={payOrder}
         >
           Pay
         </Button>
