@@ -15,7 +15,18 @@
 
 h1 {
   font-size: 30px;
+}
+h4 {
+  font-size: 20px;
+}
+
+h1,
+h4 {
   color: aliceblue;
+}
+
+.navbar {
+  display: inline;
 }
 
 .ant-row-rtl .logo {

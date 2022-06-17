@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Order from './components/Order';
 import Cart from './components/Cart';
-import Breadcrumbs from './components/Breadcrumbs';
 //Interfaces
 import { CartInterface } from './models/model';
 //React Router DOM - 6
@@ -23,7 +22,7 @@ const { Content } = Layout;
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, part, loading, cartQuantity, types } = state.genericReducer;
+  const { cartQuantity } = state.genericReducer;
   const [visible, setVisible] = useState<boolean>(false);
   const [cart, setCart] = useState<any>([]);
 
@@ -126,7 +125,6 @@ const App: React.FC = () => {
       <Layout>
         <Header showDrawer={showDrawer} />
         <Content className='main'>
-          <Breadcrumbs />
           <Layout
             className='site-layout-background'
             style={{ padding: '24px 24px' }}

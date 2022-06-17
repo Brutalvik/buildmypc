@@ -1,8 +1,7 @@
 import { Drawer } from 'antd';
 import { AppInterface } from '../models/model';
 import Cartdata from './Cartdata';
-import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
+import React from 'react';
 
 const Cart: React.FC<AppInterface> = ({
   onClose,
