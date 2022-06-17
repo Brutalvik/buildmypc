@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Button, List, Skeleton } from 'antd';
+import { Button, List } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import Item from 'antd/lib/list/Item';
-import { genericActions } from '../features/parts/genericSlice';
 
 const Cartdata: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -10,54 +8,70 @@ const Cartdata: React.FC = () => {
   const { error, types, part, loading, cart, cartQuantity } =
     state.genericReducer;
   const [renderData, setRenderData] = useState<any[]>([]);
-  const [newCart, setNewCart] = useState<any>([]);
 
-  const handleIncrementQuantity = (event: any) => {
-    console.log('hadleincrement');
-  };
+  const handleIncrementQuantity = (event: any) => {};
 
-  const handleDecrementQuantity = (event: any) => {
-    const itemExists = cart?.map((item: any) => item.id === event.id);
-    console.log('handledecrement');
-  };
+  const handleDecrementQuantity = (event: any) => {};
 
   useEffect(() => {
     setRenderData(cart);
   }, [cart]);
 
-  return (
-    <List
-      loading={loading}
-      itemLayout='horizontal'
-      size='default'
-      dataSource={renderData}
-      renderItem={(item) => (
-        <List.Item
-          actions={[
-            <Button
-              key={item?.id}
-              type='primary'
-              onClick={() => handleDecrementQuantity(item)}
-            >
-              -
-            </Button>,
-            <p>{item?.quantity}</p>,
-            <Button
-              key={item.id}
-              type='primary'
-              onClick={() => handleIncrementQuantity(item)}
-            >
-              +
-            </Button>,
-          ]}
-        >
-          <List.Item.Meta title={item.name} description={`$ ${item.price}`} />
-          <div>
-            <h4>Total : $ {item.price * item.quantity}</h4>
+  const Cartrender = () => {
+    return (
+      renderData && (
+        <>
+          <List
+            loading={loading}
+            itemLayout='horizontal'
+            size='default'
+            dataSource={renderData}
+            renderItem={(item) => (
+              <List.Item
+                actions={[
+                  <Button
+                    key={item?.id}
+                    type='primary'
+                    onClick={() => handleDecrementQuantity(item)}
+                  >
+                    -
+                  </Button>,
+                  <p>{item?.quantity}</p>,
+                  <Button
+                    key={item.id}
+                    type='primary'
+                    onClick={() => handleIncrementQuantity(item)}
+                  >
+                    +
+                  </Button>,
+                ]}
+              >
+                <List.Item.Meta
+                  title={item.name}
+                  description={`Price per unit: $ ${item.price}`}
+                />
+                <div>
+                  <h4>
+                    Subtotal : $ {(item.price * item.quantity).toFixed(2)}
+                  </h4>
+                </div>
+              </List.Item>
+            )}
+          />
+          <div style={{ float: 'right' }}>
+            <Button type='primary' shape='round' size='large'>
+              Pay
+            </Button>
           </div>
-        </List.Item>
-      )}
-    />
+        </>
+      )
+    );
+  };
+
+  return cartQuantity === 0 ? (
+    <h1 style={{ color: 'black' }}>No items in the cart</h1>
+  ) : (
+    <Cartrender />
   );
 };
 

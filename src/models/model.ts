@@ -36,3 +36,10 @@ export interface CartDrawerInterface {
   visible: boolean;
   onClose: () => void;
 }
+
+export interface ResultsInterface {
+  cart: [];
+  openNotification: (e: any) => void;
+  addToCart: (e: any) => void;
+  removeFromCart: (e: any) => void;
+}

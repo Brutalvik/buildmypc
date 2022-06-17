@@ -15,11 +15,6 @@ const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
         size='large'
       >
         <Cartdata />
-        <div style={{ float: 'right' }}>
-          <Button type='primary' shape='round' size='large'>
-            Pay
-          </Button>
-        </div>
       </Drawer>
     </>
   );
