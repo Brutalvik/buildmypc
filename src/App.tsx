@@ -64,6 +64,16 @@ const App: React.FC = () => {
     });
   };
 
+  //Delete item from cart
+  const deleteFromCart = (event: any) => {
+    setCart((prev: any) =>
+      prev.filter((item: any) => {
+        dispatch(genericActions.cartQuantity(cartQuantity - item.quantity));
+        return item.id != event.id;
+      })
+    );
+  };
+
   //Remove from cart
   const removeFromCart = (event: any) => {
     if (event.quantity === 1) {
@@ -137,6 +147,7 @@ const App: React.FC = () => {
               removeFromCart={removeFromCart}
               cartData={cart}
               setCart={setCart}
+              deleteFromCart={deleteFromCart}
             />
           </Layout>
         </Content>

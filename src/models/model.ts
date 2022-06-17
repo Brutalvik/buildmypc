@@ -38,4 +38,5 @@ export interface AppInterface {
   openNotification?: (e: any) => void;
   addToCart?: (e?: any) => void;
   removeFromCart?: (e?: any) => void;
+  deleteFromCart?: (e?: any) => void;
 }

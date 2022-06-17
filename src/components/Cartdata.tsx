@@ -4,7 +4,11 @@ import { useAppSelector } from '../app/hooks';
 import { DeleteOutlined } from '@ant-design/icons';
 import { AppInterface } from '../models/model';
 
-const Cartdata: React.FC<AppInterface> = ({ addToCart, removeFromCart }) => {
+const Cartdata: React.FC<AppInterface> = ({
+  addToCart,
+  removeFromCart,
+  deleteFromCart,
+}) => {
   const state = useAppSelector((state) => state.genericReducer);
   const { cartQuantity, loading, cart } = state;
   const [getCart, setGetCart] = useState<any[]>([]);
@@ -44,7 +48,7 @@ const Cartdata: React.FC<AppInterface> = ({ addToCart, removeFromCart }) => {
                     key={item?.price}
                     type='primary'
                     danger
-                    onClick={() => console.log(item)}
+                    onClick={() => deleteFromCart?.(item)}
                   >
                     {<DeleteOutlined />}
                   </Button>
