@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Divider, List } from 'antd';
+import { Button, Divider, List, Space } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { CartInterface } from '../models/model';
 import { genericActions } from '../features/parts/genericSlice';
+import { DeleteOutlined } from '@ant-design/icons';
 
 const Cartdata: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -77,13 +78,24 @@ const Cartdata: React.FC = () => {
             renderItem={(item) => (
               <List.Item
                 actions={[
-                  <Button
-                    key={item?.id}
-                    type='primary'
-                    onClick={() => handleDecrementQuantity(item)}
-                  >
-                    -
-                  </Button>,
+                  <>
+                    <Button
+                      key={item?.price}
+                      type='primary'
+                      danger
+                      onClick={() => console.log(item)}
+                    >
+                      {<DeleteOutlined />}
+                    </Button>
+                    <Space />
+                    <Button
+                      key={item?.id}
+                      type='primary'
+                      onClick={() => handleDecrementQuantity(item)}
+                    >
+                      -
+                    </Button>
+                  </>,
                   <p>{item?.quantity}</p>,
                   <Button
                     key={item.id}
