@@ -32,7 +32,7 @@ const genericSlice = createSlice({
     types(state, action: PayloadAction<[]>) {
       state.types = action.payload;
     },
-    cart(state, action: PayloadAction<[]>) {
+    cart(state, action: PayloadAction<any>) {
       state.cart = action.payload;
     },
     cartQuantity(state, action: PayloadAction<number>) {

@@ -13,7 +13,7 @@ export interface GenericInterface {
   loading?: boolean;
   part?: [];
   types?: [];
-  cart?: [];
+  cart?: any;
   cartQuantity?: number;
   cartVisible?: boolean;
   cartMessage?: string;

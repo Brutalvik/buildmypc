@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Button, List } from 'antd';
+import { Button, Divider, List } from 'antd';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { CartDrawerInterface, CartInterface } from '../models/model';
+import { CartInterface } from '../models/model';
 import { genericActions } from '../features/parts/genericSlice';
-import { eventNames } from 'process';
 
-const Cartdata: React.FC<CartDrawerInterface> = ({
-  addToCart,
-  removeFromCart,
-}) => {
+const Cartdata: React.FC = () => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
   const { loading, cart, cartQuantity } = state.genericReducer;
@@ -16,9 +12,9 @@ const Cartdata: React.FC<CartDrawerInterface> = ({
 
   const handleIncrementQuantity = (event: any) => {
     setRenderData((prev: any) => {
-      dispatch(genericActions.cartQuantity(cartQuantity + 1));
       const itemExists = cart?.find((item: any) => item.id === event.id);
       if (itemExists) {
+        dispatch(genericActions.cartQuantity(cartQuantity + 1));
         return prev.map((item: any) =>
           item.id === event.id
             ? { ...item, quantity: item.quantity + 1 }
@@ -49,9 +45,25 @@ const Cartdata: React.FC<CartDrawerInterface> = ({
     }
   };
 
+  const calculateTotal = (items: any) => {
+    return items.reduce(
+      (acc: number, item: any) => acc + item.quantity * item.price,
+      0
+    );
+  };
+
+  const onPay = () => {
+    dispatch(genericActions.cart(renderData));
+    console.log(cart);
+  };
+
   useEffect(() => {
     setRenderData(cart);
   }, [cart]);
+
+  // useEffect(() => {
+  //   dispatch(genericActions.cart(renderData));
+  // }, [renderData, dispatch]);
 
   const Cartrender = () => {
     return (
@@ -94,11 +106,19 @@ const Cartdata: React.FC<CartDrawerInterface> = ({
               </List.Item>
             )}
           />
-          <div style={{ float: 'right' }}>
-            <Button type='primary' shape='round' size='large'>
-              Pay
-            </Button>
-          </div>
+          <div style={{ float: 'right' }}></div>
+          <Divider />
+          <h2>Total : ${calculateTotal(renderData).toFixed(2)}</h2>
+          <Button
+            type='primary'
+            shape='round'
+            size='large'
+            style={{ marginLeft: '90%' }}
+            onClick={onPay}
+          >
+            Pay
+          </Button>
+          <Divider />
         </>
       )
     );
