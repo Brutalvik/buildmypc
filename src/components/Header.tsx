@@ -1,6 +1,6 @@
 import React from 'react';
 import { CartDrawerInterface } from '../models/model';
-import { Layout, Menu, MenuProps, Badge, Drawer } from 'antd';
+import { Layout, Menu, MenuProps, Badge } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useAppSelector } from '../app/hooks';
 
