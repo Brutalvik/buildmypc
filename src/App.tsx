@@ -29,7 +29,7 @@ const App: React.FC = () => {
       description: data.description,
       duration: 1,
       maxCount: 1,
-      placement: 'bottomRight',
+      placement: 'bottomLeft',
     });
   };
 
