@@ -14,7 +14,7 @@ const Home: React.FC<AppInterface> = ({
 }) => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, part, loading } = state.genericReducer;
+  const { error, part, loading, types } = state.genericReducer;
 
   const data = state.partsReducer;
 
@@ -26,8 +26,6 @@ const Home: React.FC<AppInterface> = ({
       dispatch(genericActions.cart(cart));
     }
   });
-
-  console.log('Cart from Results ', cart);
 
   //Fetch render data from store
   useEffect(() => {
