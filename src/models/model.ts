@@ -1,9 +1,9 @@
 export interface CartInterface {
   id: string;
   name: string;
-  brand: string;
-  clock: string;
-  socket: string;
+  brand?: string;
+  clock?: string;
+  socket?: string;
   price: string;
   quantity?: number;
 }

@@ -2,15 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Layout, notification } from 'antd';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { fetchCpuData } from './features/thunks/parts';
+import { genericActions } from './features/parts/genericSlice';
+//Components
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Breadcrumbs from './components/Breadcrumbs';
-import './App.css';
 import Home from './components/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Order from './components/Order';
 import Cart from './components/Cart';
-import { genericActions } from './features/parts/genericSlice';
+import Breadcrumbs from './components/Breadcrumbs';
+//Interfaces
 import { CartInterface } from './models/model';
+//React Router DOM - 6
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//CSS
+import './App.css';
 
 export const dbkey = process.env.REACT_APP_DB_SECRET ?? '';
 const { Content } = Layout;
@@ -139,6 +144,7 @@ const App: React.FC = () => {
                   />
                 }
               />
+              <Route path='/order' element={<Order />} />
             </Routes>
             <Cart
               visible={visible}
