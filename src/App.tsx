@@ -66,12 +66,13 @@ const App: React.FC = () => {
 
   //Remove from cart
   const removeFromCart = (event: any) => {
-    if (cartQuantity === 0) {
-      const notification = {
-        message: `Aww Snap `,
-        description: `No more products or Cart empty`,
-      };
-      openNotification(notification);
+    if (event.quantity === 1) {
+      dispatch(genericActions.cartQuantity(cartQuantity - 1));
+      setCart((prev: any) =>
+        prev.filter((item: any) => {
+          return item.id != event.id;
+        })
+      );
     } else {
       setCart((prev: any) =>
         prev.reduce((acc: any, item: any) => {

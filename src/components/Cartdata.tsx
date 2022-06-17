@@ -18,9 +18,13 @@ const Cartdata: React.FC<CartDrawerInterface> = ({
       0
     );
   };
+
+  //Async function tp get cart data
   const data = async () => {
     setGetCart(cart);
   };
+
+  //Get cart data useeffect
   useEffect(() => {
     data();
   }, [cart]);
