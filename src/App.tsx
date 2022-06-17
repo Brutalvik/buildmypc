@@ -73,7 +73,13 @@ const App: React.FC = () => {
     setCart((prev: any) =>
       prev.filter((item: any) => {
         dispatch(genericActions.cartQuantity(cartQuantity - item.quantity));
-        return item.id != event.id;
+        dispatch(genericActions.cartQuantity(cartQuantity - 1));
+        const notification = {
+          message: `Product: ${event.brand} ${event.name}  `,
+          description: `Deleted from cart`,
+        };
+        openNotification(notification);
+        return item.id !== event.id;
       })
     );
   };
@@ -82,9 +88,14 @@ const App: React.FC = () => {
   const removeFromCart = (event: any) => {
     if (event.quantity === 1) {
       dispatch(genericActions.cartQuantity(cartQuantity - 1));
+      const notification = {
+        message: `Product: ${event.brand} ${event.name}  `,
+        description: `Deleted from cart`,
+      };
+      openNotification(notification);
       setCart((prev: any) =>
         prev.filter((item: any) => {
-          return item.id != event.id;
+          return item.id !== event.id;
         })
       );
     } else {
@@ -93,6 +104,11 @@ const App: React.FC = () => {
           if (item.id === event.id) {
             if (item.amount === 1) return acc;
             dispatch(genericActions.cartQuantity(cartQuantity - 1));
+            const notification = {
+              message: `Product: ${event.brand} ${event.name}  `,
+              description: `Removed from cart`,
+            };
+            openNotification(notification);
             return [...acc, { ...item, quantity: item.quantity - 1 }];
           } else {
             return [...acc, item];

@@ -28,12 +28,12 @@ const HeaderData: React.FC<AppInterface> = ({ showDrawer }) => {
       >
         <Link to='/'>
           <Menu.Item key={1}>
-            <h4>Home</h4>
+            <h3>Home</h3>
           </Menu.Item>
         </Link>
         <Link to='/order'>
           <Menu.Item key={2}>
-            <h4>Order Summary</h4>
+            <h3>Order Summary</h3>
           </Menu.Item>
         </Link>
       </Menu>

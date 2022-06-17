@@ -20,14 +20,9 @@ const Cartdata: React.FC<AppInterface> = ({
     );
   };
 
-  //Async function tp get cart data
-  const data = async () => {
-    setGetCart(cart);
-  };
-
   //Get cart data useeffect
   useEffect(() => {
-    data();
+    setGetCart(cart);
   }, [cart]);
 
   return cartQuantity === 0 ? (
