@@ -4,13 +4,12 @@ import { useAppDispatch, useAppSelector } from './app/hooks';
 import { fetchCpuData } from './features/thunks/parts';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
 import Breadcrumbs from './components/Breadcrumbs';
-import Results from './components/Results';
 import './App.css';
 import { genericActions } from './features/parts/genericSlice';
 import { CartInterface } from './models/model';
 import Home from './components/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export const dbkey = process.env.REACT_APP_DB_SECRET ?? '';
 const { Content } = Layout;
@@ -98,24 +97,33 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout>
-      <Header />
-      <Content className='main'>
-        <Breadcrumbs />
-        <Layout
-          className='site-layout-background'
-          style={{ padding: '24px 24px' }}
-        >
-          <Home
-            cart={cart}
-            openNotification={openNotification}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-          />
-        </Layout>
-      </Content>
-      <Footer />
-    </Layout>
+    <Router>
+      <Layout>
+        <Header />
+        <Content className='main'>
+          <Breadcrumbs />
+          <Layout
+            className='site-layout-background'
+            style={{ padding: '24px 24px' }}
+          >
+            <Routes>
+              <Route
+                path='/'
+                element={
+                  <Home
+                    cart={cart}
+                    openNotification={openNotification}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
+                  />
+                }
+              />
+            </Routes>
+          </Layout>
+        </Content>
+        <Footer />
+      </Layout>
+    </Router>
   );
 };
 
