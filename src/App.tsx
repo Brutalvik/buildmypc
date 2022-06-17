@@ -151,11 +151,9 @@ const App: React.FC = () => {
                 path='/'
                 element={
                   <Home
-                    addToCart={addToCart}
-                    openNotification={openNotification}
+                    addtocart={addToCart}
+                    opennotification={openNotification}
                     cart={cart}
-                    setCart={setCart}
-                    removeFromCart={removeFromCart}
                   />
                 }
               />
@@ -164,12 +162,10 @@ const App: React.FC = () => {
             </Routes>
             <Cart
               visible={visible}
-              onClose={onClose}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-              cartData={cart}
-              setCart={setCart}
-              deleteFromCart={deleteFromCart}
+              onclose={onClose}
+              addtocart={addToCart}
+              removefromcart={removeFromCart}
+              deletefromcart={deleteFromCart}
             />
           </Layout>
         </Content>

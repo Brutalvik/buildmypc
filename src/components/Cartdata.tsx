@@ -6,10 +6,10 @@ import { AppInterface } from '../models/model';
 import { useNavigate } from 'react-router-dom';
 
 const Cartdata: React.FC<AppInterface> = ({
-  addToCart,
-  removeFromCart,
-  deleteFromCart,
-  onClose,
+  addtocart,
+  removefromcart,
+  deletefromcart,
+  onclose,
 }) => {
   const navigate = useNavigate();
   const state = useAppSelector((state) => state.genericReducer);
@@ -25,7 +25,7 @@ const Cartdata: React.FC<AppInterface> = ({
 
   const payOrder = async () => {
     navigate('/order');
-    onClose?.();
+    onclose?.();
   };
 
   //Get cart data useeffect
@@ -51,7 +51,7 @@ const Cartdata: React.FC<AppInterface> = ({
                     key={item?.price}
                     type='primary'
                     danger
-                    onClick={() => deleteFromCart?.(item)}
+                    onClick={() => deletefromcart?.(item)}
                   >
                     {<DeleteOutlined />}
                   </Button>
@@ -59,7 +59,7 @@ const Cartdata: React.FC<AppInterface> = ({
                   <Button
                     key={item?.id}
                     type='primary'
-                    onClick={() => removeFromCart?.(item)}
+                    onClick={() => removefromcart?.(item)}
                   >
                     -
                   </Button>
@@ -68,7 +68,7 @@ const Cartdata: React.FC<AppInterface> = ({
                 <Button
                   key={item.id}
                   type='primary'
-                  onClick={() => addToCart?.(item)}
+                  onClick={() => addtocart?.(item)}
                 >
                   +
                 </Button>,

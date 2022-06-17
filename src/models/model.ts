@@ -31,12 +31,11 @@ export interface NotificationInterface {
 export interface AppInterface {
   cartData?: [];
   cart?: [];
-  setCart?: any;
   visible?: boolean;
-  onClose?: () => void;
+  onclose?: () => void;
   showDrawer?: () => void;
-  openNotification?: (e: any) => void;
-  addToCart?: (e?: any) => void;
-  removeFromCart?: (e?: any) => void;
-  deleteFromCart?: (e?: any) => void;
+  opennotification?: (e: any) => void;
+  addtocart?: (e?: any) => void;
+  removefromcart?: (e?: any) => void;
+  deletefromcart?: (e?: any) => void;
 }

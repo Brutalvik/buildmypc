@@ -37,6 +37,7 @@ const HeaderData: React.FC<AppInterface> = ({ showDrawer }) => {
           </Menu.Item>
         </Link>
       </Menu>
+
       <Badge className='cart' count={cartQuantity}>
         <ShoppingCartOutlined onClick={showDrawer} />
       </Badge>

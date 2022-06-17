@@ -4,27 +4,27 @@ import Cartdata from './Cartdata';
 import React from 'react';
 
 const Cart: React.FC<AppInterface> = ({
-  onClose,
+  onclose,
   visible,
-  addToCart,
-  removeFromCart,
-  deleteFromCart,
+  addtocart,
+  removefromcart,
+  deletefromcart,
 }) => {
   return (
     <>
       <Drawer
         title='Cart'
         placement='right'
-        onClose={onClose}
+        onClose={onclose}
         visible={visible}
         keyboard={true}
         size='large'
       >
         <Cartdata
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          deleteFromCart={deleteFromCart}
-          onClose={onClose}
+          addtocart={addtocart}
+          removefromcart={removefromcart}
+          deletefromcart={deletefromcart}
+          onclose={onclose}
         />
       </Drawer>
     </>

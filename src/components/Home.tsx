@@ -8,8 +8,8 @@ import { Avatar, Button, List, Skeleton } from 'antd';
 import Notification from './Notification';
 
 const Home: React.FC<AppInterface> = ({
-  addToCart,
-  openNotification,
+  addtocart,
+  opennotification,
   cart,
 }) => {
   const dispatch = useAppDispatch();
@@ -38,10 +38,16 @@ const Home: React.FC<AppInterface> = ({
     });
   }, [part, data]);
 
+  useEffect(() => {
+    Object.entries(data).map((reqData) => {
+      console.log(reqData);
+    });
+  }, []);
+
   const Results = () => {
     return (
       <>
-        <Notification openNotification={() => openNotification} />
+        <Notification openNotification={() => opennotification} />
         <List
           loading={loading}
           itemLayout='horizontal'
@@ -52,7 +58,7 @@ const Home: React.FC<AppInterface> = ({
               actions={[
                 <Button
                   key={item.id}
-                  onClick={() => addToCart?.(item)}
+                  onClick={() => addtocart?.(item)}
                   type='primary'
                 >
                   Add to Cart
@@ -83,7 +89,7 @@ const Home: React.FC<AppInterface> = ({
         {error ? (
           <h1 style={{ color: 'black' }}>Error Fetching Data</h1>
         ) : (
-          renderData && <Results />
+          <Results />
         )}
       </Content>
     </>
