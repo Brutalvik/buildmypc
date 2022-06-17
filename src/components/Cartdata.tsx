@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Button, Divider, List, Space } from 'antd';
 import { useAppSelector } from '../app/hooks';
 import { DeleteOutlined } from '@ant-design/icons';
-import { CartDrawerInterface } from '../models/model';
+import { AppInterface } from '../models/model';
 
-const Cartdata: React.FC<CartDrawerInterface> = ({
-  addToCart,
-  removeFromCart,
-}) => {
+const Cartdata: React.FC<AppInterface> = ({ addToCart, removeFromCart }) => {
   const state = useAppSelector((state) => state.genericReducer);
   const { cartQuantity, loading, cart } = state;
   const [getCart, setGetCart] = useState<any[]>([]);

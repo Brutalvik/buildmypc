@@ -28,20 +28,14 @@ export interface NotificationInterface {
   openNotification: () => void;
 }
 
-export interface CartDrawerInterface {
+export interface AppInterface {
+  cartData?: [];
+  cart?: [];
+  setCart?: any;
   visible?: boolean;
-  showDrawer?: () => void;
   onClose?: () => void;
+  showDrawer?: () => void;
+  openNotification?: (e: any) => void;
   addToCart?: (e?: any) => void;
   removeFromCart?: (e?: any) => void;
-  cartData?: [];
-  setCart?: any;
-}
-
-export interface AppInterface {
-  cart: [];
-  setCart: any;
-  openNotification: (e: any) => void;
-  addToCart: (e: any) => void;
-  removeFromCart: (e: any) => void;
 }

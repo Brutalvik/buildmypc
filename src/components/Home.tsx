@@ -11,11 +11,10 @@ const Home: React.FC<AppInterface> = ({
   addToCart,
   openNotification,
   cart,
-  setCart,
 }) => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, part, loading, cartQuantity, types } = state.genericReducer;
+  const { error, part, loading } = state.genericReducer;
 
   const data = state.partsReducer;
 
@@ -55,7 +54,7 @@ const Home: React.FC<AppInterface> = ({
               actions={[
                 <Button
                   key={item.id}
-                  onClick={() => addToCart(item)}
+                  onClick={() => addToCart?.(item)}
                   type='primary'
                 >
                   Add to Cart

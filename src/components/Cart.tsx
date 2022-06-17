@@ -1,5 +1,5 @@
 import { Drawer } from 'antd';
-import { CartDrawerInterface } from '../models/model';
+import { AppInterface } from '../models/model';
 import Cartdata from './Cartdata';
 import React, { useEffect, useState } from 'react';
 import { Button, Divider, List, Space } from 'antd';
@@ -8,7 +8,7 @@ import { CartInterface } from '../models/model';
 import { genericActions } from '../features/parts/genericSlice';
 import { DeleteOutlined } from '@ant-design/icons';
 
-const Cart: React.FC<CartDrawerInterface> = ({
+const Cart: React.FC<AppInterface> = ({
   onClose,
   visible,
   addToCart,
