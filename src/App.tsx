@@ -10,16 +10,19 @@ import { genericActions } from './features/parts/genericSlice';
 import { CartInterface } from './models/model';
 import Home from './components/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Cart from './components/Cart';
 
 export const dbkey = process.env.REACT_APP_DB_SECRET ?? '';
 const { Content } = Layout;
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
-  const [cart, setCart] = useState<any>([]);
   const state = useAppSelector((state) => state);
   const { error, types, part, loading, cartQuantity, notificaitonMessage } =
     state.genericReducer;
+
+  const [cart, setCart] = useState<any>([]);
+  const [visible, setVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -30,6 +33,14 @@ const App: React.FC = () => {
     };
     getData();
   }, [dispatch]);
+
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
 
   // //Open notification function
   const openNotification = (data: any) => {
@@ -99,7 +110,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Layout>
-        <Header />
+        <Header showDrawer={showDrawer} />
         <Content className='main'>
           <Breadcrumbs />
           <Layout
@@ -119,6 +130,7 @@ const App: React.FC = () => {
                 }
               />
             </Routes>
+            <Cart visible={visible} onClose={onClose} />
           </Layout>
         </Content>
         <Footer />

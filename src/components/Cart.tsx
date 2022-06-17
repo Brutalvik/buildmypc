@@ -4,6 +4,7 @@ import { CartDrawerInterface } from '../models/model';
 import Cartdata from './Cartdata';
 
 const Cart: React.FC<CartDrawerInterface> = ({ onClose, visible }) => {
+  console.log(visible);
   return (
     <>
       <Drawer

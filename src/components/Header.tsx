@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ItemInterface } from '../models/model';
+import { CartDrawerInterface } from '../models/model';
 import { Layout, Menu, MenuProps, Badge, Drawer } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
@@ -14,17 +14,8 @@ const nav: MenuProps['items'] = ['Build PC', 'Pre-Built PC', 'Laptops'].map(
   })
 );
 
-const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
+const HeaderData: React.FC<CartDrawerInterface> = ({ showDrawer }) => {
   const { cartQuantity } = useAppSelector((state) => state.genericReducer);
-  const [visible, setVisible] = useState<boolean>(false);
-
-  const onClose = () => {
-    setVisible(false);
-  };
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
 
   return (
     <Header className='header'>
@@ -39,7 +30,6 @@ const HeaderData: React.FC<ItemInterface> = ({ items }: ItemInterface) => {
       />
       <Badge className='cart' count={cartQuantity}>
         <ShoppingCartOutlined onClick={showDrawer} />
-        <Cart visible={visible} onClose={onClose} />
       </Badge>
     </Header>
   );

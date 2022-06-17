@@ -1,7 +1,3 @@
-export interface ItemInterface {
-  items?: any;
-}
-
 export interface CartInterface {
   id: string;
   name: string;
@@ -33,8 +29,9 @@ export interface NotificationInterface {
 }
 
 export interface CartDrawerInterface {
-  visible: boolean;
-  onClose: () => void;
+  visible?: boolean;
+  showDrawer?: () => void;
+  onClose?: () => void;
 }
 
 export interface ResultsInterface {
