@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Order from './components/Order';
 import Cart from './components/Cart';
+import Errorpage from './components/Errorpage';
 //Interfaces
 import { CartInterface } from './models/model';
 //React Router DOM - 6
@@ -159,6 +160,7 @@ const App: React.FC = () => {
                 }
               />
               <Route path='/order' element={<Order />} />
+              <Route path='/*' element={<Errorpage />} />
             </Routes>
             <Cart
               visible={visible}
