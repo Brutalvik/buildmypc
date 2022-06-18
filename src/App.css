@@ -16,21 +16,14 @@
 h1 {
   font-size: 30px;
 }
-h4 {
-  font-size: 20px;
-}
-
 h3 {
-  display: inline;
-  margin-left: 2%;
+  font-size: 20px;
+  padding-left: 2%;
 }
 
 h1,
 h3 {
   color: aliceblue;
-}
-
-.navbar {
   display: inline;
 }
 
@@ -53,8 +46,7 @@ h3 {
 }
 
 .cart {
-  margin-top: -1.5em;
-  margin-right: -0.5em;
+  margin-top: 0.7em;
   color: white;
   font-size: 2em;
   float: right;

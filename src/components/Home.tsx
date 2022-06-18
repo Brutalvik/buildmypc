@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import React, { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { genericActions } from '../features/parts/genericSlice';
-import { Avatar, Button, List, Skeleton } from 'antd';
+import { Button, List, Skeleton } from 'antd';
 import Notification from './Notification';
 
 const Home: React.FC<AppInterface> = ({
@@ -39,23 +39,78 @@ const Home: React.FC<AppInterface> = ({
     });
   }, [part, data]);
 
+  console.log(renderData);
+
+  //Filter data by type function
   const filterByValue = (array: any, string: string) => {
     return array.filter((o: any) =>
-      Object.keys(o).some((k) =>
-        o[k]?.toLowerCase().includes(string.toLowerCase())
-      )
+      Object.keys(o).some((k) => {
+        return typeof o[k] === 'string'
+          ? o[k].toLowerCase() === string.toLowerCase()
+            ? o[k].toLowerCase().includes(string.toLowerCase())
+            : null
+          : null;
+      })
     );
   };
 
   useEffect(() => {
-    Object.entries(data).map((reqData) => {
-      types.map((term: string) => {
-        const filteredValue = filterByValue(reqData[1], term);
-
-        console.log(filteredValue);
+    if (types.length > 0) {
+      const filteredValue = Object.entries(data).map((reqData) => {
+        return types.map((term: string) => {
+          return filterByValue(reqData[1], term);
+        });
       });
-    });
+      filteredValue.map((item: any) => {
+        item.map((item: any) => {
+          item.length && setfilteredData(item);
+        });
+      });
+    } else {
+      setfilteredData([]);
+    }
   }, [types, data]);
+
+  console.log(filteredData.length);
+
+  const render = (item: any) => {
+    switch (item.type) {
+      case 'cpu':
+        return (
+          <List.Item.Meta
+            title={`${item.brand} ${item.name}  -- ${item.socket}`}
+            description={`Clock Speed: ${item.clock}  ||  Total Cores: ${item.cores} || L3 Cache: ${item.l3} `}
+          />
+        );
+      case 'memory':
+        return (
+          <List.Item.Meta
+            title={`${item.brand} ${item.name}  -- ${item.for}`}
+            description={`Version ${item.version}  || capacity: ${item.cores}`}
+          />
+        );
+      case 'motherboard':
+        return (
+          <List.Item.Meta
+            title={`${item.brand} ${item.name}`}
+            description={`Chipset ${item.chipset}  || Socket: ${item.socket} || Form-Factor: ${item.formfactor}`}
+          />
+        );
+      case 'gpu':
+        return (
+          <List.Item.Meta
+            title={`${item.brand} ${item.name}  -- ${item.chipset}`}
+            description={`Memory ${item.memory}  || Clock: ${item.memoryclock} || Shaders: ${item.shaders} || BUS: ${item.bus}`}
+          />
+        );
+      default:
+        return (
+          <List.Item.Meta
+            title={`${item.brand} ${item.name}  -- ${item.chipset}`}
+          />
+        );
+    }
+  };
 
   const Results = () => {
     return (
@@ -65,7 +120,7 @@ const Home: React.FC<AppInterface> = ({
           loading={loading}
           itemLayout='horizontal'
           size='large'
-          dataSource={renderData}
+          dataSource={filteredData.length > 0 ? filteredData : renderData}
           renderItem={(item) => (
             <List.Item
               actions={[
@@ -79,11 +134,7 @@ const Home: React.FC<AppInterface> = ({
               ]}
             >
               <Skeleton avatar title={false} loading={loading} active>
-                <List.Item.Meta
-                  avatar={<Avatar />}
-                  title={`${item.brand} ${item.name}  -- ${item.socket}`}
-                  description={`Clock Speed: ${item.clock}  ||  Total Cores: ${item.cores} || L3 Cache: ${item.l3} `}
-                />
+                {render(item)}
                 <div>
                   <h4>$ {item.price}</h4>
                 </div>
