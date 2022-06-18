@@ -20,6 +20,11 @@ h4 {
   font-size: 20px;
 }
 
+h3 {
+  display: inline;
+  margin-left: 2%;
+}
+
 h1,
 h3 {
   color: aliceblue;

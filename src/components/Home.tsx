@@ -19,6 +19,7 @@ const Home: React.FC<AppInterface> = ({
   const data = state.partsReducer;
 
   const [renderData, setRenderData] = useState<any[]>([]);
+  const [filteredData, setfilteredData] = useState<any[]>([]);
 
   //Update cart in store
   useEffect(() => {
@@ -38,11 +39,23 @@ const Home: React.FC<AppInterface> = ({
     });
   }, [part, data]);
 
+  const filterByValue = (array: any, string: string) => {
+    return array.filter((o: any) =>
+      Object.keys(o).some((k) =>
+        o[k]?.toLowerCase().includes(string.toLowerCase())
+      )
+    );
+  };
+
   useEffect(() => {
     Object.entries(data).map((reqData) => {
-      console.log(reqData);
+      types.map((term: string) => {
+        const filteredValue = filterByValue(reqData[1], term);
+
+        console.log(filteredValue);
+      });
     });
-  }, []);
+  }, [types, data]);
 
   const Results = () => {
     return (
