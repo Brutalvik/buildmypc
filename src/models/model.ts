@@ -34,8 +34,14 @@ export interface AppInterface {
   visible?: boolean;
   onclose?: () => void;
   showDrawer?: () => void;
-  opennotification?: (e: any) => void;
+  opennotification?: (e?: any) => void;
   addtocart?: (e?: any) => void;
   removefromcart?: (e?: any) => void;
   deletefromcart?: (e?: any) => void;
+}
+
+export interface ResultsInterface {
+  filtereddata: any[];
+  renderdata: any[];
+  addtocart?: (e?: any) => void;
 }

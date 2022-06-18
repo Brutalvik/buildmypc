@@ -45,6 +45,10 @@ h3 {
   min-height: 300px;
 }
 
+.content-data {
+  padding: 20%;
+}
+
 .cart {
   margin-top: 0.7em;
   color: white;

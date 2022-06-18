@@ -1,11 +1,12 @@
 import { Content } from 'antd/lib/layout/layout';
 import { AppInterface } from '../models/model';
 import Sidebar from './Sidebar';
+import { SmileOutlined } from '@ant-design/icons';
 import React, { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { genericActions } from '../features/parts/genericSlice';
-import { Button, List, Skeleton } from 'antd';
 import Notification from './Notification';
+import Results from './Results';
 
 const Home: React.FC<AppInterface> = ({
   addtocart,
@@ -14,7 +15,7 @@ const Home: React.FC<AppInterface> = ({
 }) => {
   const dispatch = useAppDispatch();
   const state = useAppSelector((state) => state);
-  const { error, part, loading, types } = state.genericReducer;
+  const { error, part, types } = state.genericReducer;
 
   const data = state.partsReducer;
 
@@ -38,8 +39,6 @@ const Home: React.FC<AppInterface> = ({
       });
     });
   }, [part, data]);
-
-  console.log(renderData);
 
   //Filter data by type function
   const filterByValue = (array: any, string: string) => {
@@ -71,89 +70,23 @@ const Home: React.FC<AppInterface> = ({
     }
   }, [types, data]);
 
-  console.log(filteredData.length);
-
-  const render = (item: any) => {
-    switch (item.type) {
-      case 'cpu':
-        return (
-          <List.Item.Meta
-            title={`${item.brand} ${item.name}  -- ${item.socket}`}
-            description={`Clock Speed: ${item.clock}  ||  Total Cores: ${item.cores} || L3 Cache: ${item.l3} `}
-          />
-        );
-      case 'memory':
-        return (
-          <List.Item.Meta
-            title={`${item.brand} ${item.name}  -- ${item.for}`}
-            description={`Version ${item.version}  || capacity: ${item.cores}`}
-          />
-        );
-      case 'motherboard':
-        return (
-          <List.Item.Meta
-            title={`${item.brand} ${item.name}`}
-            description={`Chipset ${item.chipset}  || Socket: ${item.socket} || Form-Factor: ${item.formfactor}`}
-          />
-        );
-      case 'gpu':
-        return (
-          <List.Item.Meta
-            title={`${item.brand} ${item.name}  -- ${item.chipset}`}
-            description={`Memory ${item.memory}  || Clock: ${item.memoryclock} || Shaders: ${item.shaders} || BUS: ${item.bus}`}
-          />
-        );
-      default:
-        return (
-          <List.Item.Meta
-            title={`${item.brand} ${item.name}  -- ${item.chipset}`}
-          />
-        );
-    }
-  };
-
-  const Results = () => {
-    return (
-      <>
-        <Notification openNotification={() => opennotification} />
-        <List
-          loading={loading}
-          itemLayout='horizontal'
-          size='large'
-          dataSource={filteredData.length > 0 ? filteredData : renderData}
-          renderItem={(item) => (
-            <List.Item
-              actions={[
-                <Button
-                  key={item.id}
-                  onClick={() => addtocart?.(item)}
-                  type='primary'
-                >
-                  Add to Cart
-                </Button>,
-              ]}
-            >
-              <Skeleton avatar title={false} loading={loading} active>
-                {render(item)}
-                <div>
-                  <h4>$ {item.price}</h4>
-                </div>
-              </Skeleton>
-            </List.Item>
-          )}
-        />
-      </>
-    );
-  };
-
   return (
     <>
+      <Notification openNotification={() => opennotification} />
       <Sidebar />
       <Content className='content'>
         {error ? (
           <h1 style={{ color: 'black' }}>Error Fetching Data</h1>
+        ) : renderData.length <= 0 ? (
+          <div className='content-data'>
+            <h2>Please select a product</h2>
+          </div>
         ) : (
-          <Results />
+          <Results
+            filtereddata={filteredData}
+            renderdata={renderData}
+            addtocart={addtocart}
+          />
         )}
       </Content>
     </>
