@@ -44,8 +44,6 @@ const App: React.FC = () => {
       id: event.id,
       name: event.name,
       brand: event.brand,
-      clock: event.clock,
-      socket: event.socket,
       price: event.price,
       quantity: 1,
     };
@@ -73,6 +71,11 @@ const App: React.FC = () => {
   const deleteFromCart = (event: any) => {
     if (cart.length <= 1) {
       dispatch(genericActions.cartQuantity(0));
+      const notification = {
+        message: `Oh Oh ! `,
+        description: `No items in Cart`,
+      };
+      openNotification(notification);
     } else {
       setCart((prev: any) =>
         prev.filter((item: any) => {

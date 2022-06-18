@@ -1,7 +1,6 @@
 import { Content } from 'antd/lib/layout/layout';
 import { AppInterface } from '../models/model';
 import Sidebar from './Sidebar';
-import { SmileOutlined } from '@ant-design/icons';
 import React, { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { genericActions } from '../features/parts/genericSlice';
@@ -62,7 +61,7 @@ const Home: React.FC<AppInterface> = ({
       });
       filteredValue.map((item: any) => {
         item.map((item: any) => {
-          item.length && setfilteredData(item);
+          item.length > 1 && setfilteredData(item);
         });
       });
     } else {
