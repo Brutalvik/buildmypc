@@ -21,7 +21,7 @@ const HeaderData: React.FC<AppInterface> = ({ showDrawer }) => {
         <h3>Home</h3>
       </Link>
       <Link to='/order'>
-        <h3>Order Summary</h3>
+        <h3>Order</h3>
       </Link>
 
       <Badge className='cart' count={cartQuantity}>
