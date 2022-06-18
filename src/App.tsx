@@ -71,18 +71,21 @@ const App: React.FC = () => {
 
   //Delete item from cart
   const deleteFromCart = (event: any) => {
-    setCart((prev: any) =>
-      prev.filter((item: any) => {
-        dispatch(genericActions.cartQuantity(cartQuantity - item.quantity));
-        dispatch(genericActions.cartQuantity(cartQuantity - 1));
-        const notification = {
-          message: `Product: ${event.brand} ${event.name}  `,
-          description: `Deleted from cart`,
-        };
-        openNotification(notification);
-        return item.id !== event.id;
-      })
-    );
+    if (cart.length <= 1) {
+      dispatch(genericActions.cartQuantity(0));
+    } else {
+      setCart((prev: any) =>
+        prev.filter((item: any) => {
+          dispatch(genericActions.cartQuantity(cartQuantity - item.quantity));
+          const notification = {
+            message: `Product: ${event.brand} ${event.name}  `,
+            description: `Deleted from cart`,
+          };
+          openNotification(notification);
+          return item.id !== event.id;
+        })
+      );
+    }
   };
 
   //Remove from cart
